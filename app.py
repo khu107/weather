@@ -22,7 +22,7 @@ def home():
 @app.route("/mars", methods=["GET"])
 def mars_get():
     
-    html = requests.get('https://search.naver.com/search.naver?sm=tab_sug.asiw&where=nexearch&query=%EB%B6%80%EC%82%B0+%EB%82%A0%EC%94%A8')
+    html = requests.get('https://search.naver.com/search.naver?sm=tab_sug.asiw&where=nexearch&query=%ED%83%9C%ED%8F%89%EB%8F%99+%EB%82%A0%EC%94%A8')
     soup = BeautifulSoup(html.text, 'html.parser')
 
     local = soup.find('div', {'class':'title_area _area_panel'}).find('h2',{'class':'title'}).text
